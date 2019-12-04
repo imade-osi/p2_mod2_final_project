@@ -1,0 +1,2 @@
+module AgencyArtistsHelper
+end

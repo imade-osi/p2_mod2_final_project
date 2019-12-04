@@ -1,0 +1,2 @@
+class LocalArtistSong < ApplicationRecord
+end

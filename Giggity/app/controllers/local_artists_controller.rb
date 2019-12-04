@@ -1,0 +1,2 @@
+class LocalArtistsController < ApplicationController
+end

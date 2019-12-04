@@ -1,0 +1,2 @@
+class AgencyGigsController < ApplicationController
+end

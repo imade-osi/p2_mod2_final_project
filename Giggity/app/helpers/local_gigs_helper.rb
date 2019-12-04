@@ -1,0 +1,2 @@
+module LocalGigsHelper
+end
