@@ -1,0 +1,2 @@
+class LocalGig < ApplicationRecord
+end

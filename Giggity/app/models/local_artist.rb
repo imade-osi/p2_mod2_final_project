@@ -1,0 +1,2 @@
+class LocalArtist < ApplicationRecord
+end

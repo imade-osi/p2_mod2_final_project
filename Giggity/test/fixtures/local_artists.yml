@@ -1,0 +1,13 @@
+# Read about fixtures at https://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
+
+one:
+  genre: MyString
+  name: MyString
+  rating: 1
+  bankroll: 1
+
+two:
+  genre: MyString
+  name: MyString
+  rating: 1
+  bankroll: 1

@@ -1,0 +1,2 @@
+class AgencyArtistSong < ApplicationRecord
+end

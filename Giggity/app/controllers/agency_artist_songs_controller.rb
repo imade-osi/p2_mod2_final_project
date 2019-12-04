@@ -1,0 +1,2 @@
+class AgencyArtistSongsController < ApplicationController
+end

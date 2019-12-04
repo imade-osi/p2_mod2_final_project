@@ -1,0 +1,2 @@
+class AgencyGig < ApplicationRecord
+end

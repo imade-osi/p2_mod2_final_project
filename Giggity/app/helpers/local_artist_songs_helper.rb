@@ -1,0 +1,2 @@
+module LocalArtistSongsHelper
+end

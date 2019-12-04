@@ -1,0 +1,2 @@
+class LocalGigsController < ApplicationController
+end
