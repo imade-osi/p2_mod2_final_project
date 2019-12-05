@@ -5,3 +5,7 @@
 #
 #   movies = Movie.create([{ name: 'Star Wars' }, { name: 'Lord of the Rings' }])
 #   Character.create(name: 'Luke', movie: movies.first)
+
+LocalArtist.destroy_all 
+
+la1 = LocalArtist.create(:name "lil Big Baby", :genre "hip hop", :rating )
