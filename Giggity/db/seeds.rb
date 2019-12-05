@@ -12,6 +12,12 @@ AgencyArtist.destroy_all
 AgencyArtistSong.destroy_all
 LocalArtist.destroy_all 
 
+
+la1 = LocalArtist.create(:name "Lil big Baby", :genre "hip hop", :rating 7.8, :wallet 750.24, :zipcode 10221)
+la2 = LocalArtist.create(:name "ThrowBack Thursday", :genre "gender reveal parties", :rating 9.9, :wallet 15000.50, :zipcode 10229)
+la3 = LocalArtist.create(:name "That One Band", :genre "late night strolls", :rating 4.5, :wallet 1000, :zipcode 10225)
+la4 = LocalArtist.create(:name "Big lil Man", :genre "wedding crasher", :rating 8.0, :wallet 20, :zipcode 10219)
+
 a1 = Agency.create(name: "RED")
 a2 = Agency.create(name: "Paradigm")
 a3 = Agency.create(name: "Nu Agency")
@@ -36,4 +42,3 @@ aas10 = AgencyArtistSong.create(title: "Starboy", agency_artist_id:23)
 aas11 = AgencyArtistSong.create(title: "Side To Side", agency_artist_id:24)
 aas12 = AgencyArtistSong.create(title: "God is a woman", agency_artist_id:24)
 
-la1 = LocalArtist.create(:name "lil Big Baby", :genre "hip hop", :rating )

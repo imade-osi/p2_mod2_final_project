@@ -1,7 +1,7 @@
 <h1>Welcome <%= @venue.venue_name %>! </h1>
 
 <ol>
-    <%= button_to 'Search for Artist' %>
+    <%= button_to 'Search for Artist', localsearch_path %>
     <%= button_to 'Create a Gig' %>
     <%= button_to 'View Gigs' %> 
     <%= button_to 'Book Agency Artist', agencies_path, method: :get %>
