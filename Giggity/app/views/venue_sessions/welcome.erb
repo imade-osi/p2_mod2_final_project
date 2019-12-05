@@ -1,0 +1,22 @@
+<h1>Venue Welcome Page!</h1>
+
+
+<% if venue_logged_in? %>
+    <h1>You are Logged In, <%= current_venue_user.username %>
+</h1>
+
+<%end%>
+
+<br>
+<br>
+<br>
+<br>
+<br>
+<br>
+
+
+<%= button_to "Login", '/venue-login', method: :get%>
+<br>
+<%= button_to "Sign Up", '/venues/new', method: :get%>
+<br>
+<%= button_to "Main Menu", '/', method: :get%>

@@ -13,3 +13,38 @@
  *= require_tree .
  *= require_self
  */
+
+
+@import 'bootstrap';
+
+
+ h1{
+     color:rgb(238, 232, 230);
+     text-shadow: 1px 1px 1px #000, 
+               3px 3px 5px blue; 
+     font: impact  100px Georgia;
+     text-align: center;
+    margin: auto;
+    width: 100%;
+ }
+
+
+body {
+  
+    background-image: url('https://wallpapercave.com/wp/lwfQm84.jpg');
+    background-position-y: 150px;
+    background-position-x: 5px;
+  
+    background-size: auto;
+  }
+
+  body.show {
+  
+    /* background-image: url('https://wallpapercave.com/wp/lwfQm84.jpg'); */
+    background-color: bisque;
+    background-position-y: 150px; 
+    background-position-x: 5px;
+  
+    background-size: auto;
+  }
+

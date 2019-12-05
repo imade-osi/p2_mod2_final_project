@@ -1,0 +1,11 @@
+<h1>Artist Welcome Page!</h1>
+
+<% if artist_logged_in? %>
+    <h1>You are Logged In, <%= current_artist_user.username %>
+</h1>
+
+<%end%>
+
+<%= button_to "Login", '/artist-login', method: :get%>
+<%= button_to "Sign Up", '/artists/new', method: :get%>
+<%= button_to "Main Menu", '/' %>

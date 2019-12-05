@@ -1,0 +1,21 @@
+<h1>Venue Login</h1>
+<br>
+
+<embed src="p2_music/poundcake_instrumental.mp3" autostart="true" loop="true" hidden="true"><embed>  
+   
+<% if flash[:errors] %>
+    <%=flash[:errors] %><br>     
+<% end %>
+
+
+<%= form_for :session, url: 'venue-login', html: { class: "form" } do |f| %>
+  <%= f.label  :username %>
+  <%= f.text_field :username %>
+  <%= f.label :password %>
+  <%= f.password_field :password %>
+  <%= f.submit "Log In" %>
+<% end %>
+
+
+<h3><%= button_to " Back to Welcome Screen!" , venue_user_path  %>  </h3>
+

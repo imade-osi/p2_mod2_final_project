@@ -1,0 +1,17 @@
+<h1> Artist Sign Up</h1>
+<%= form_for @venue do |f|%>
+  <%= f.label "Username" %><br>
+  <%= f.text_field :username%><br>
+  <%= f.label "Password" %><br>
+  <%= f.password_field :password %><br>
+  <%= f.label "Artist Name" %>
+  <%= f.text_field : :artist_name %>
+  <%= f.label "Artist_Genre" %>
+  <%= f.text_field : :genre %>
+  <%= f.label "Bankroll" %>
+  <%= f.text_field : :bankroll %>
+  <%= f.label "Zipcode" %>
+  <%= f.number_field  :zipcode %>
+  
+  <%= f.submit %>
+<%end%>
