@@ -1,0 +1,8 @@
+<h1> <%= @agency.name %> </h1>
+<h2> Artists: </h2>
+<ul>
+<% @agency.agency_artists.each do |agency_artist| %>
+
+  <li><%= link_to agency_artist.name, agency_artist %></li> 
+      <% end %> 
+</ul>
