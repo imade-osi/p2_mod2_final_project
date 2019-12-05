@@ -1,4 +1,6 @@
 <h1><%= @agency_artist.name %></h1>
+<h2> Genre: <%= @agency_artist.genre %> </h2>
+<h2> Fee: <%= @agency_artist.fee %> </h2>
 <h2> Songs: </h2>
 <ul>
 <% @agency_artist.agency_artist_songs.each do |agency_artist_song| %>
@@ -6,3 +8,5 @@
   <li><%= link_to agency_artist_song.title, agency_artist_song %></li> 
       <% end %> 
 </ul>
+
+<%= button_to 'Book Artist', agency_gigs_path, method: :get %>
