@@ -1,4 +1,8 @@
 class AgencyGigsController < ApplicationController
+    def index
+    end
+    def show
+    end
     def new
         @agencygig = AgencyGig.new
 

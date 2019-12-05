@@ -4,7 +4,7 @@
 <% if venue_logged_in? %>
     <h1>You are Logged In, <%= current_venue_user.username %>
     </h1>
-   
+    <%= button_to "My Homepage", @venue, method: :get %>
     <%= button_to 'Log Out', venuelogout_path, method: :delete %>
     <%else%>
 <br>
