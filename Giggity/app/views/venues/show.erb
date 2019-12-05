@@ -1,10 +1,10 @@
-<h1>welcome <%= @venue.venue_name %> </h1>
+<h1>Welcome <%= @venue.venue_name %>! </h1>
 
 <ol>
     <%= button_to 'Search for Artist' %>
     <%= button_to 'Create a Gig' %>
     <%= button_to 'View Gigs' %> 
-    <%= button_to 'Book Agency Artist' %>
+    <%= button_to 'Book Agency Artist', agencies_path, method: :get %>
     <%= button_to 'Log Out', venuelogout_path, method: :delete %>
 </ol>
 <!-- 

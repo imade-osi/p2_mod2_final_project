@@ -1,12 +1,12 @@
-<h1>Venue Welcome Page!</h1>
+<h1>Welcome!</h1>
 
 
 <% if venue_logged_in? %>
     <h1>You are Logged In, <%= current_venue_user.username %>
-</h1>
-
-<%end%>
-
+    </h1>
+   
+    <%= button_to 'Log Out', venuelogout_path, method: :delete %>
+    <%else%>
 <br>
 <br>
 <br>
@@ -20,3 +20,7 @@
 <%= button_to "Sign Up", '/venues/new', method: :get%>
 <br>
 <%= button_to "Main Menu", '/', method: :get%>
+<br>
+
+
+<%end%>
