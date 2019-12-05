@@ -4,7 +4,6 @@ Rails.application.routes.draw do
   ###### Venue User Routes #############################
    get 'venue-login', to: 'venue_sessions#new'
    post 'venue-login', to: 'venue_sessions#create'
-   get 'venue-welcome', to: 'venue_sessions#welcome'
    post 'venue-welcome', to: 'venue_sessions#welcome', as: 'venue_user'
    get 'venue-authorized', to: 'venue_sessions#venuepage_requires_login'
    ######################################################
@@ -12,14 +11,19 @@ Rails.application.routes.draw do
   ###### Artist User Routes ############################
    get 'artist-login', to: 'artist_sessions#new'
    post 'artist-login', to: 'artist_sessions#create'
-   get 'artist-welcome', to: 'artist_sessions#welcome'
    post 'artist-welcome', to: 'artist_sessions#welcome', as: 'artist_user'
    get 'artist-authorized', to: 'artist_sessions#artistpage_requires_login'
    ######################################################
 
 
+  post 'local-artist-search', to: 'local_search#newsearch', as: 'localsearch'
+  post 'local-artist-search', to: 'local_search#results', as: 'localresults'
+  post 'offer-gigs', to: 'gigs#offer', as: 'offergigs' 
+  post 'show-gigs', to: 'gigs#show', as: 'showgigs' 
+  
+  
   delete "/logout", to: "venue_sessions#destroy_venue", as: "venuelogout"
-  delete "artist-welcome", to: "artist_sessions#destroy_artist", as: "artistlogout"
+  delete "/artist-welcome", to: "artist_sessions#destroy_artist", as: "artistlogout"
   
 
   resources :agency_artist_songs

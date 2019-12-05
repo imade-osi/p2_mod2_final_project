@@ -5,6 +5,10 @@ class LocalArtistsController < ApplicationController
        @artist = LocalArtist.new
     end
 
+    def index
+      @artists = LocalArtist.all
+    end 
+
     def create
        @artist = LocalArtist.create(params.require(:venue).permit(:user_name,        
        :password, :artist_name, :genre, :bankroll))
@@ -14,8 +18,12 @@ class LocalArtistsController < ApplicationController
 
 
     def artist_params
-        params.require(:venue).permit(:user_name,        
-       :password, :artist_name, :genre, :bankroll, :zipcode))
+        params.require(:venue).permit(:username,        
+       :password, :artist_name, :genre, :bankroll, :zipcode, :search)
+     end 
+
+     def show 
+      @artist = LocalArtist.find(params[:id])
      end 
 
 end
