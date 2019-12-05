@@ -3,7 +3,7 @@ class CreateAgencyArtists < ActiveRecord::Migration[6.0]
     create_table :agency_artists do |t|
       t.string :name
       t.string :genre
-      t.integer :fee
+      t.float :fee
 
       t.timestamps
     end

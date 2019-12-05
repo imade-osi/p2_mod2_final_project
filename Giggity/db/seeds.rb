@@ -6,11 +6,11 @@
 #   movies = Movie.create([{ name: 'Star Wars' }, { name: 'Lord of the Rings' }])
 #   Character.create(name: 'Luke', movie: movies.first)
 
-
 Agency.destroy_all
 AgencyGig.destroy_all
 AgencyArtist.destroy_all
 AgencyArtistSong.destroy_all
+LocalArtist.destroy_all 
 
 a1 = Agency.create(name: "RED")
 a2 = Agency.create(name: "Paradigm")
@@ -36,15 +36,4 @@ aas10 = AgencyArtistSong.create(title: "Starboy", agency_artist_id:23)
 aas11 = AgencyArtistSong.create(title: "Side To Side", agency_artist_id:24)
 aas12 = AgencyArtistSong.create(title: "God is a woman", agency_artist_id:24)
 
-
-
-
-
-
-
-
-
-
-
-
-
+la1 = LocalArtist.create(:name "lil Big Baby", :genre "hip hop", :rating )

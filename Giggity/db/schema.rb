@@ -28,7 +28,7 @@ ActiveRecord::Schema.define(version: 2019_12_05_182514) do
   create_table "agency_artists", force: :cascade do |t|
     t.string "name"
     t.string "genre"
-    t.integer "fee"
+    t.float "fee"
     t.datetime "created_at", precision: 6, null: false
     t.datetime "updated_at", precision: 6, null: false
     t.integer "agency_id"
@@ -36,7 +36,7 @@ ActiveRecord::Schema.define(version: 2019_12_05_182514) do
 
   create_table "agency_gigs", force: :cascade do |t|
     t.string "date"
-    t.integer "compensation"
+    t.float "compensation"
     t.datetime "created_at", precision: 6, null: false
     t.datetime "updated_at", precision: 6, null: false
   end
@@ -52,8 +52,8 @@ ActiveRecord::Schema.define(version: 2019_12_05_182514) do
     t.string "artist_name"
     t.string "username"
     t.string "password_digest"
-    t.integer "rating"
-    t.integer "bankroll"
+    t.float "rating"
+    t.float "bankroll"
     t.integer "zipcode"
     t.datetime "created_at", precision: 6, null: false
     t.datetime "updated_at", precision: 6, null: false
@@ -61,7 +61,7 @@ ActiveRecord::Schema.define(version: 2019_12_05_182514) do
 
   create_table "local_gigs", force: :cascade do |t|
     t.string "date"
-    t.integer "compensation"
+    t.float "compensation"
     t.datetime "created_at", precision: 6, null: false
     t.datetime "updated_at", precision: 6, null: false
   end
@@ -70,7 +70,7 @@ ActiveRecord::Schema.define(version: 2019_12_05_182514) do
     t.string "username"
     t.string "password_digest"
     t.string "venue_name"
-    t.integer "bankroll"
+    t.float "bankroll"
     t.integer "zipcode"
     t.datetime "created_at", precision: 6, null: false
     t.datetime "updated_at", precision: 6, null: false

@@ -5,8 +5,8 @@ class CreateLocalArtists < ActiveRecord::Migration[6.0]
       t.string :artist_name
       t.string :username
       t.string :password_digest
-      t.integer :rating
-      t.integer :bankroll
+      t.float  :rating
+      t.float  :bankroll
       t.integer :zipcode
       t.timestamps
     end
