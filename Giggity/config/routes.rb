@@ -30,7 +30,7 @@ Rails.application.routes.draw do
   resources :local_artist_songs
   resources :agency_artists
   resources :managers
-  resources :agency_gigs, only: [:new]
+  resources :agency_gigs
   resources :local_gigs
   resources :agencies
   resources :local_artists
