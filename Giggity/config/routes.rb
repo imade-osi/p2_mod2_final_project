@@ -15,7 +15,8 @@ Rails.application.routes.draw do
    get 'artist-authorized', to: 'artist_sessions#artistpage_requires_login'
    ######################################################
 
-
+  
+  get 'local-artist-search', to: 'local_search#newsearch', as: 'getlocalsearch'
   post 'local-artist-search', to: 'local_search#newsearch', as: 'localsearch'
   post 'local-artist-search', to: 'local_search#results', as: 'localresults'
   post 'offer-gigs', to: 'gigs#offer', as: 'offergigs' 

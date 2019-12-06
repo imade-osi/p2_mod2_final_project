@@ -1,13 +1,20 @@
 class LocalArtistsController < ApplicationController
-   skip_before_action :artist_authorized, only: [:new, :create]
+   # skip_before_action :artist_authorized, only: [:new, :create]
    
    def new
        @artist = LocalArtist.new
     end
 
-    def index
-      @artists = LocalArtist.all
-    end 
+   def index
+      if params[:zipcode] != ''
+            session[:search_results] = request.url
+            @artists = LocalArtist.where(zipcode: params[:zipcode])
+          
+        else
+           
+            @artists = LocalArtist.all
+        end
+   end  
 
     def create
        @artist = LocalArtist.create(params.require(:venue).permit(:user_name,        
@@ -17,13 +24,14 @@ class LocalArtistsController < ApplicationController
     end
 
 
-    def artist_params
+   def artist_params
         params.require(:venue).permit(:username,        
        :password, :artist_name, :genre, :bankroll, :zipcode, :search)
-     end 
+   end 
 
-     def show 
+   def show
       @artist = LocalArtist.find(params[:id])
-     end 
+      @venue = Venue.find_by(id: session[:venue_id])
+   end 
 
 end

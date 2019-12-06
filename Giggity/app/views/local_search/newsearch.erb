@@ -1,18 +1,17 @@
 <h1>Local Artist Search</h1>
 
+<br>
+<br>
+<br>
+<br>
+<br>
+
+<center>
 <h4> Search Artist by Zipcode: </h4>
 <%= form_tag(local_artists_path, method: :get) do %>
 <%= text_field_tag(:zipcode, params[:zipcode]) %>
-<%= submit_tag ("Search") %>
+<%= submit_tag "Search" %>
 <% end %>
-
-
-<% @artists.each do |artist| %>
-
-<ul>
-    <li> Artist Name: <%= button_to artist.name, artist_path %> </li>  
-    <li> Rating: <%= artist.rating %>  </li>
- </ul>   
-    <% end %>
-
-    <%= button_to "My Homepage", @venue, method: :get %>
+<br>
+<%= button_to "Back to Homepage", @venue, method: :get %>
+</center>

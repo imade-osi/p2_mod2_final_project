@@ -38,17 +38,29 @@
     background-size: auto;
   } */
 
-  body.show {
+  body {
   
-    /* background-image: url('https://wallpapercave.com/wp/lwfQm84.jpg'); */
+    background-image: url('https://wallpapercave.com/wp/lwfQm84.jpg'); 
     background-color: bisque;
     background-position-y: 150px; 
     background-position-x: 5px;
   
     background-size: auto;
   }
+
   section{
 
     text-align: center;
   }
+
+  div{ margin-left: 45px; 
+       text-decoration: underline;
+     }
+
+  menu{
+    
+    padding: 75px 250px;
+  }
+
+
 

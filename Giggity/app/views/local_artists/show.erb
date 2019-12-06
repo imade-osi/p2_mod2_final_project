@@ -1,1 +1,12 @@
-<h1><%= @artist.name %></h1>
+<h1><%= @artist.artist_name %>'s Artist Page</h1>
+
+<br>
+<center><h2>Artist Rating: <%= @artist.rating %></h2></center>
+
+<center>
+<menu>
+<%= button_to "Offer Local Gig" %>
+<%= button_to "Play Songs from Artist" %>
+<%= button_to "Back to Home Page!", @venue, method: :get %>
+</menu>
+</center>
