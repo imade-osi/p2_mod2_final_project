@@ -4,7 +4,7 @@ class CreateAgencyArtists < ActiveRecord::Migration[6.0]
       t.string :name
       t.string :genre
       t.float :fee
-
+      t.belongs_to :agency
       t.timestamps
     end
   end
