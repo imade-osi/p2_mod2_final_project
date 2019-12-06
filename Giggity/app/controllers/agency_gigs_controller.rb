@@ -1,12 +1,5 @@
 class AgencyGigsController < ApplicationController
-    def index
-    end
-    def show
-    end
-    def new
-        @agencygig = AgencyGig.new
-
-    end
+   
 
     def create
         @agencygig = AgencyGig.create(agencygig_params)
@@ -20,5 +13,15 @@ class AgencyGigsController < ApplicationController
     def agencygig_params
         params.require(:agencygig).permit(:date, :compensation)
     end 
+    def index
+
+    end
+    def show
+        
+    end
+    def new
+        @agencygig = AgencyGig.new
+
+    end
 
 end
