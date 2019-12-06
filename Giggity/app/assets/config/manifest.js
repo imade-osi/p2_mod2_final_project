@@ -1,3 +1,15 @@
 //= link_tree ../images
 //= link_directory ../stylesheets .css
 //= link poundcake_instrumental.mp3
+//= link 99_problems.mp3
+//= link bad_blood.mp3
+//= link circles.mp3
+//= link empire_state_of_mind.mp3
+//= link god_is_a_woman.mp3
+//= link cant_feel_my_face.mp3
+//= link love_yourself.mp3
+//= link rockstar.mp3
+//= link shake_it_off.mp3
+//= link side_to_side.mp3
+//= link sorry.mp3
+//= link starboy.mp3
