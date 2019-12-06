@@ -10,7 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 2019_12_04_205823) do
+ActiveRecord::Schema.define(version: 2019_12_06_161957) do
 
   create_table "agencies", force: :cascade do |t|
     t.string "name"
@@ -19,40 +19,33 @@ ActiveRecord::Schema.define(version: 2019_12_04_205823) do
   end
 
   create_table "agency_artist_songs", force: :cascade do |t|
-    t.string "name"
-    t.integer "agency_artist_id"
     t.datetime "created_at", precision: 6, null: false
     t.datetime "updated_at", precision: 6, null: false
-    t.index ["agency_artist_id"], name: "index_agency_artist_songs_on_agency_artist_id"
+    t.string "title"
+    t.integer "agency_artist_id"
   end
 
   create_table "agency_artists", force: :cascade do |t|
     t.string "name"
     t.string "genre"
-    t.float "fee"
-    t.integer "agency_id"
+    t.integer "fee"
     t.datetime "created_at", precision: 6, null: false
     t.datetime "updated_at", precision: 6, null: false
-    t.index ["agency_id"], name: "index_agency_artists_on_agency_id"
+    t.integer "agency_id"
   end
 
   create_table "agency_gigs", force: :cascade do |t|
     t.string "date"
-    t.float "compensation"
-    t.integer "venue_id"
-    t.integer "agency_id"
+    t.integer "compensation"
     t.datetime "created_at", precision: 6, null: false
     t.datetime "updated_at", precision: 6, null: false
-    t.index ["agency_id"], name: "index_agency_gigs_on_agency_id"
-    t.index ["venue_id"], name: "index_agency_gigs_on_venue_id"
   end
 
   create_table "local_artist_songs", force: :cascade do |t|
-    t.string "name"
-    t.integer "local_artist_id"
     t.datetime "created_at", precision: 6, null: false
     t.datetime "updated_at", precision: 6, null: false
-    t.index ["local_artist_id"], name: "index_local_artist_songs_on_local_artist_id"
+    t.string "title"
+    t.integer "local_artist_id"
   end
 
   create_table "local_artists", force: :cascade do |t|
@@ -60,8 +53,8 @@ ActiveRecord::Schema.define(version: 2019_12_04_205823) do
     t.string "artist_name"
     t.string "username"
     t.string "password_digest"
-    t.float "rating"
-    t.float "bankroll"
+    t.integer "rating"
+    t.integer "bankroll"
     t.integer "zipcode"
     t.datetime "created_at", precision: 6, null: false
     t.datetime "updated_at", precision: 6, null: false
@@ -69,20 +62,16 @@ ActiveRecord::Schema.define(version: 2019_12_04_205823) do
 
   create_table "local_gigs", force: :cascade do |t|
     t.string "date"
-    t.float "compensation"
-    t.integer "venue_id"
-    t.integer "local_artist_id"
+    t.integer "compensation"
     t.datetime "created_at", precision: 6, null: false
     t.datetime "updated_at", precision: 6, null: false
-    t.index ["local_artist_id"], name: "index_local_gigs_on_local_artist_id"
-    t.index ["venue_id"], name: "index_local_gigs_on_venue_id"
   end
 
   create_table "venues", force: :cascade do |t|
     t.string "username"
     t.string "password_digest"
     t.string "venue_name"
-    t.float "bankroll"
+    t.integer "bankroll"
     t.integer "zipcode"
     t.datetime "created_at", precision: 6, null: false
     t.datetime "updated_at", precision: 6, null: false
