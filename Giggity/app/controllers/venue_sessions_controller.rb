@@ -6,6 +6,10 @@ def new
 
 end 
 
+def welcome 
+   @venue = Venue.find_by(id: session[:venue_id])
+end 
+
 def create
       venue = Venue.find_by(username: params[:session][:username])
       if venue && venue.authenticate(params[:session][:password])

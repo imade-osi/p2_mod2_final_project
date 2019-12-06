@@ -1,0 +1,12 @@
+<h1> Create Gig </h1>
+
+<%= form_for @agency_gig do |f| %>
+
+    <%= f.label :date %>
+    <%= f.collection_select :agency_gig_id, AgencyGig.all, :id, :date %>
+
+    <%= f.label :compensation %>
+    <%= f.collection_select :agency_gig_id, AgencyGig.all, :id, :compensation %>
+
+    <%= f.submit %>
+<% end %>
